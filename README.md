@@ -37,6 +37,15 @@ For the full pinout, see Seeed's [getting started page].
 The first build downloads and compiles ESP-IDF, Espressif's SDK: several GB and
 a good while.
 
+### Nix
+
+From the repository root, run `nix develop` to enter the provided development
+shell. It supplies the build tools and the nightly Rust toolchain used by the
+ESP32 steps. If you use direnv, run `direnv allow` once to enter the shell
+automatically when you visit the repository. To build the web pages, use
+`nix develop .#stable`, which includes the WebAssembly target and
+`wasm-bindgen-cli`; install Node.js and npm separately.
+
 1. Install the system packages: a C compiler and linker (rustup doesn't bring
    one), Python 3.9 or newer for the ESP-IDF build, and `libudev` for `espflash`.
 
