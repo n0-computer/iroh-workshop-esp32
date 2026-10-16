@@ -1,0 +1,4 @@
+# The deck builds on your computer with stable Rust; the workspace's nightly is
+# only needed for the ESP32.
+[toolchain]
+channel = "stable"

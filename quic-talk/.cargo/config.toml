@@ -1,0 +1,3 @@
+# Build for this computer, not the ESP32 target set for the workspace above.
+[build]
+target = "host-tuple"

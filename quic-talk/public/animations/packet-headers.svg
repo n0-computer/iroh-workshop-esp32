@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 400">
+  <text x="204" y="42" text-anchor="end" font-family="'Space Mono', monospace" font-size="18" font-weight="bold" fill="#222">WireGuard</text>
+  <text x="204" y="60" text-anchor="end" font-family="'Space Mono', monospace" font-size="11" fill="#888">transport data</text>
+  <rect x="220" y="20" width="130" height="46" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="285.0" y="49.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#991b1b">04 00 00 00</text>
+  <text x="285.0" y="84" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">4</text>
+  <rect x="350" y="20" width="130" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="415.0" y="49.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#92400e">receiver</text>
+  <text x="415.0" y="84" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">4</text>
+  <rect x="480" y="20" width="150" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="555.0" y="49.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#92400e">counter +1</text>
+  <text x="555.0" y="84" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">8</text>
+  <rect x="630" y="20" width="300" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="780.0" y="49.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#6b7280">encrypted IP packet</text>
+  <text x="780.0" y="84" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">n</text>
+  <rect x="930" y="20" width="110" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="985.0" y="49.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#6b7280">tag</text>
+  <text x="985.0" y="84" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">16</text>
+  <text x="204" y="147" text-anchor="end" font-family="'Space Mono', monospace" font-size="18" font-weight="bold" fill="#222">disco</text>
+  <text x="204" y="165" text-anchor="end" font-family="'Space Mono', monospace" font-size="11" fill="#888">Tailscale hole punching</text>
+  <rect x="220" y="125" width="200" height="46" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="320.0" y="154.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#991b1b">54 53 F0 9F 92 AC</text>
+  <text x="320.0" y="189" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">6</text>
+  <rect x="420" y="125" width="230" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="535.0" y="154.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#92400e">sender disco key</text>
+  <text x="535.0" y="189" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">32</text>
+  <rect x="650" y="125" width="150" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="725.0" y="154.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#6b7280">nonce</text>
+  <text x="725.0" y="189" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">24</text>
+  <rect x="800" y="125" width="240" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="920.0" y="154.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#6b7280">sealed box</text>
+  <text x="920.0" y="189" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">n</text>
+  <text x="204" y="252" text-anchor="end" font-family="'Space Mono', monospace" font-size="18" font-weight="bold" fill="#222">QUIC</text>
+  <text x="204" y="270" text-anchor="end" font-family="'Space Mono', monospace" font-size="11" fill="#888">short header, greased</text>
+  <rect x="220" y="230" width="90" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="272.0" y="259.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#6b7280">flags</text>
+  <text x="265.0" y="294" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">1</text>
+  <rect x="310" y="230" width="180" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="400.0" y="259.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#92400e">connection id</text>
+  <text x="400.0" y="294" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">0-20</text>
+  <rect x="490" y="230" width="140" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="560.0" y="259.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#6b7280">packet nr</text>
+  <text x="560.0" y="294" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">1-4</text>
+  <rect x="630" y="230" width="410" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="835.0" y="259.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="16" fill="#6b7280">encrypted frames + tag</text>
+  <text x="835.0" y="294" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">n</text>
+  <rect x="220" y="230" width="14" height="46" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="227" y="258.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#991b1b">0</text>
+  <rect x="220" y="350" width="22" height="22" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="252" y="366" font-family="'Space Mono', monospace" font-size="14" fill="#444">same in every packet</text>
+  <rect x="460.0" y="350" width="22" height="22" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="492.0" y="366" font-family="'Space Mono', monospace" font-size="14" fill="#444">same or predictable within a flow</text>
+  <rect x="811.8" y="350" width="22" height="22" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="843.8" y="366" font-family="'Space Mono', monospace" font-size="14" fill="#444">looks random</text>
+</svg>

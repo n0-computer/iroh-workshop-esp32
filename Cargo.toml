@@ -6,7 +6,7 @@ members = ["esp32", "esp32/macros", "protocol", "01-hello", "02-identity", "03-l
 # The web pages build for the browser, the CLI and the slides for your
 # computer, not the ESP32. Step 5 needs Bluetooth, which the other steps
 # shouldn't carry, so it has its own ESP-IDF configuration and build.
-exclude = ["web", "cli", "05-lamp", "slides"]
+exclude = ["web", "cli", "05-lamp", "slides", "quic-talk"]
 
 [profile.release]
 # Speed, not size: the app is ~4 MB of 8 MB flash, and the certificate checks

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+  <style>/* transparent-canvas */ :root { background-color: transparent; color-scheme: light dark; }</style>
+  <!-- 20s loop (SMIL):
+       stream 1: smooth dot flow throughout (3s per crossing)
+       stream 2: flows, receiver stops reading at 2.6s (amber plug),
+                 dots queue at the receiving end, reads again at 7.4s,
+                 queue drains, smooth flow for the rest of the loop
+       stream 3: flows smoothly, a packet reaches the receiving end and turns
+                 hollow (lost) at 11.4s, followers queue behind the
+                 hole, retransmit fills it at 15.0s, drain, flow -->
+
+  <!-- ========== connection (bubble + 3 streams) ========== -->
+  <rect x="160" y="85" width="680" height="130" rx="20" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="500.0" y="73" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#6366f1">one QUIC connection</text>
+  <path id="pipe1" d="M 195 113 L 805 113" fill="none" stroke="none"/>
+  <rect x="182" y="100.0" width="636" height="26" rx="13.0" fill="#eee" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="186" y="96" text-anchor="start" font-family="'Space Mono', monospace" font-size="10" fill="#888">stream 1</text>
+  <path id="pipe2" d="M 195 150 L 805 150" fill="none" stroke="none"/>
+  <rect x="182" y="137.0" width="636" height="26" rx="13.0" fill="#eee" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="186" y="133" text-anchor="start" font-family="'Space Mono', monospace" font-size="10" fill="#888">stream 2</text>
+  <path id="pipe3" d="M 195 187 L 805 187" fill="none" stroke="none"/>
+  <rect x="182" y="174.0" width="636" height="26" rx="13.0" fill="#eee" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="186" y="170" text-anchor="start" font-family="'Space Mono', monospace" font-size="10" fill="#888">stream 3</text>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="3s" begin="0.0s" repeatCount="indefinite"><mpath href="#pipe1"/></animateMotion><animate attributeName="opacity" dur="3s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.08;0.92;1" values="0;1;1;0"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="3s" begin="-0.75s" repeatCount="indefinite"><mpath href="#pipe1"/></animateMotion><animate attributeName="opacity" dur="3s" begin="-0.75s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.08;0.92;1" values="0;1;1;0"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite"><mpath href="#pipe1"/></animateMotion><animate attributeName="opacity" dur="3s" begin="-1.5s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.08;0.92;1" values="0;1;1;0"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="3s" begin="-2.25s" repeatCount="indefinite"><mpath href="#pipe1"/></animateMotion><animate attributeName="opacity" dur="3s" begin="-2.25s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.08;0.92;1" values="0;1;1;0"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;0.94;0.94;1;0;0;1;0;0;1;0;0;1;0;0" keyTimes="0;0.1;0.241;0.37;0.3875;0.3875;0.47;0.62;0.62;0.645;0.795;0.795;0.82;0.97;0.97;1"><mpath href="#pipe2"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.1;0.1075;0.38;0.3875;0.47;0.4775;0.6125;0.62;0.645;0.6525;0.7875;0.795;0.82;0.8275;0.9625;0.97;1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.9667;1;0;0;0.87;0.87;1;0;0;1;0;0;1;0;0;0.9667" keyTimes="0;0.005;0.005;0.14;0.2705;0.38;0.3975;0.3975;0.505;0.655;0.655;0.68;0.83;0.83;0.855;1"><mpath href="#pipe2"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0;0.005;0.14;0.1475;0.39;0.3975;0.505;0.5125;0.6475;0.655;0.68;0.6875;0.8225;0.83;0.855;0.8625;1" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.7333;1;0;0;0.8;0.8;1;0;0;1;0;0;1;0;0;0.7333" keyTimes="0;0.04;0.04;0.18;0.3;0.39;0.4075;0.4075;0.54;0.69;0.69;0.715;0.865;0.865;0.89;1"><mpath href="#pipe2"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.0325;0.04;0.18;0.1875;0.4;0.4075;0.54;0.5475;0.6825;0.69;0.715;0.7225;0.8575;0.865;0.89;0.8975;1" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.5;1;0;0;0.73;0.73;1;0;0;1;0;0;1;0;0;0.5" keyTimes="0;0.075;0.075;0.22;0.3295;0.4;0.4175;0.4175;0.575;0.725;0.725;0.75;0.9;0.9;0.925;1"><mpath href="#pipe2"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.0675;0.075;0.22;0.2275;0.41;0.4175;0.575;0.5825;0.7175;0.725;0.75;0.7575;0.8925;0.9;0.925;0.9325;1" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.2667;1;0;0;0.66;0.66;1;0;0;1;0;0;1;0;0;0.2667" keyTimes="0;0.11;0.11;0.26;0.359;0.41;0.4275;0.4275;0.61;0.76;0.76;0.785;0.935;0.935;0.96;1"><mpath href="#pipe2"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.1025;0.11;0.26;0.2675;0.42;0.4275;0.61;0.6175;0.7525;0.76;0.785;0.7925;0.9275;0.935;0.96;0.9675;1" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1"/></circle>
+  <rect x="810" y="141" width="4" height="18" rx="2" fill="#d97706" opacity="0"><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.13;0.145;0.37;0.385;1" values="0;0;1;1;0;0"/></rect>
+  <text x="818" y="133" text-anchor="end" font-family="'Space Mono', monospace" font-size="10" fill="#d97706" opacity="0">receiver not reading<animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.13;0.145;0.37;0.385;1" values="0;0;1;1;0;0"/></text>
+  <circle r="4" fill="#2563eb" opacity="0" stroke="#2563eb" stroke-width="1.5"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;0;0;1;0;0;0.94;0.94;1;0;0;1;0;0" keyTimes="0;0.07;0.22;0.22;0.245;0.395;0.395;0.43;0.571;0.765;0.7825;0.7825;0.83;0.98;0.98;1"><mpath href="#pipe3"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.07;0.0775;0.2125;0.22;0.245;0.2525;0.3875;0.395;0.43;0.4375;0.775;0.7825;0.83;0.8375;0.9725;0.98;1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0"/><animate attributeName="fill-opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.571;0.5835;0.75;0.7625;1" values="1;1;0;0;1;1"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;0;0;1;0;0;0.87;0.87;1;0;0;1;0;0" keyTimes="0;0.11;0.26;0.26;0.295;0.445;0.445;0.47;0.6005;0.775;0.7925;0.7925;0.84;0.99;0.99;1"><mpath href="#pipe3"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.11;0.1175;0.2525;0.26;0.295;0.3025;0.4375;0.445;0.47;0.4775;0.785;0.7925;0.84;0.8475;0.9825;0.99;1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.8333;1;0;0;1;0;0;1;0;0;0.8;0.8;1;0;0;0.8333" keyTimes="0;0.025;0.025;0.15;0.3;0.3;0.335;0.485;0.485;0.51;0.63;0.785;0.8025;0.8025;0.875;1"><mpath href="#pipe3"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.0175;0.025;0.15;0.1575;0.2925;0.3;0.335;0.3425;0.4775;0.485;0.51;0.5175;0.795;0.8025;0.875;0.8825;1" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1"/></circle>
+  <circle r="4" fill="#2563eb" opacity="0"><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.6;1;0;0;1;0;0;1;0;0;0.73;0.73;1;0;0;0.6" keyTimes="0;0.06;0.06;0.19;0.34;0.34;0.375;0.525;0.525;0.55;0.6595;0.795;0.8125;0.8125;0.91;1"><mpath href="#pipe3"/></animateMotion><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.0525;0.06;0.19;0.1975;0.3325;0.34;0.375;0.3825;0.5175;0.525;0.55;0.5575;0.805;0.8125;0.91;0.9175;1" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1"/></circle>
+  <text x="768" y="170" text-anchor="middle" font-family="'Space Mono', monospace" font-size="10" fill="#d97706" opacity="0">packet lost<animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.571;0.586;0.75;0.765;1" values="0;0;1;1;0;0"/></text>
+
+  <!-- ========== left device ========== -->
+  <rect x="45" y="75" width="90" height="150" rx="16" fill="#eee" stroke="#888" stroke-width="1.5"/>
+  <path d="M 61 79
+           L 72.0 79
+           Q 75.0 79 75.0 82
+           L 75.0 83
+           Q 75.0 87 79.0 87
+           L 101.0 87
+           Q 105.0 87 105.0 83
+           L 105.0 82
+           Q 105.0 79 108.0 79
+           L 119 79
+           A 12 12 0 0 1 131 91
+           L 131 209
+           A 12 12 0 0 1 119 221
+           L 61 221
+           A 12 12 0 0 1 49 209
+           L 49 91
+           A 12 12 0 0 1 61 79 Z"
+        fill="#eee" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="65.0" y="134.0" width="50" height="32" rx="4" fill="#eee" stroke="#d97706" stroke-width="1.5"/>
+  <text x="90.0" y="155.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#d97706">iroh</text>
+
+  <!-- ========== right device ========== -->
+  <rect x="865" y="75" width="90" height="150" rx="16" fill="#eee" stroke="#888" stroke-width="1.5"/>
+  <rect x="869" y="79" width="82" height="142" rx="12" fill="#eee" stroke="#6366f1" stroke-width="1.5"/>
+  <circle cx="910.0" cy="88" r="2.5" fill="#888"/>
+  <rect x="885.0" y="134.0" width="50" height="32" rx="4" fill="#eee" stroke="#d97706" stroke-width="1.5"/>
+  <text x="910.0" y="155.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#d97706">iroh</text>
+
+  <!-- ========== connection lines (on top of the phone bodies) ========== -->
+  <line x1="115" y1="150" x2="160" y2="150" stroke="#2563eb" stroke-width="2"/>
+  <line x1="840" y1="150" x2="885" y2="150" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Timer bar (position in loop) -->
+  <rect x="0" y="296" width="0" height="3" fill="#9ca3af">
+    <animate attributeName="width" from="0" to="1000" dur="20s" repeatCount="indefinite"/>
+  </rect>
+</svg>

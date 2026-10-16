@@ -1,0 +1,9 @@
+[package]
+name = "quic-talk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pulldown-cmark = "0.12"
+regex = "1"
+syntect = "5"

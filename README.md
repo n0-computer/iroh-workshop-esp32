@@ -197,6 +197,7 @@ them. Step 5 has its own build, see above.
 | `05-lamp/` | the demo, with its own build and Bluetooth settings |
 | `web/` | the pages, one per step (not part of the workspace: it builds for the browser) |
 | `slides/` | the intro talk, see [`slides/README.md`](slides/README.md) |
+| `quic-talk/` | the "Why iroh uses QUIC" talk, see [`quic-talk/README.md`](quic-talk/README.md) |
 | `sdkconfig.defaults` | ESP-IDF settings for all steps (PSRAM, buffer sizes, ...) |
 | `05-lamp/sdkconfig.defaults` | Bluetooth, on top of those, for step 5 only |
 | `.cargo/config.toml` | target, chip (`MCU`), and the flash command |
