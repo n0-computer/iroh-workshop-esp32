@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560">
+  <text x="240.0" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">sender</text>
+  <rect x="40" y="56" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="240.0" y="76" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">application</text>
+  <text x="240.0" y="94" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#374151">write to streams</text>
+  <rect x="40" y="112" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="132" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">stream send buffers</text>
+  <text x="240.0" y="150" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">one per stream</text>
+  <rect x="40" y="168" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="188" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">packetization</text>
+  <text x="240.0" y="206" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">frames from many streams</text>
+  <rect x="40" y="224" width="400" height="46" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="240.0" y="244" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#92400e">encryption</text>
+  <text x="240.0" y="262" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#92400e">TLS 1.3 keys · every packet</text>
+  <rect x="40" y="280" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="300" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">loss recovery</text>
+  <text x="240.0" y="318" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">ACK frames · retransmit</text>
+  <rect x="40" y="336" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="356" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">congestion control</text>
+  <text x="240.0" y="374" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">per path</text>
+  <rect x="40" y="416" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="240.0" y="436" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">UDP socket</text>
+  <text x="240.0" y="454" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#374151">datagrams only</text>
+  <rect x="40" y="472" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="240.0" y="501.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">IP · NIC</text>
+  <text x="860.0" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">receiver</text>
+  <rect x="660" y="56" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="860.0" y="76" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">application</text>
+  <text x="860.0" y="94" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#374151">read from streams</text>
+  <rect x="660" y="112" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="132" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">stream receive buffers</text>
+  <text x="860.0" y="150" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">one per stream</text>
+  <rect x="660" y="168" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="188" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">reassembly</text>
+  <text x="860.0" y="206" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">loss stalls one stream</text>
+  <rect x="660" y="224" width="400" height="46" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="860.0" y="244" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#92400e">decryption</text>
+  <text x="860.0" y="262" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#92400e">TLS 1.3 keys · every packet</text>
+  <rect x="660" y="280" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="300" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">ACK generation</text>
+  <text x="860.0" y="318" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">ACK frames · encrypted</text>
+  <rect x="660" y="336" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="356" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">flow control</text>
+  <text x="860.0" y="374" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">per stream + connection</text>
+  <rect x="660" y="416" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="860.0" y="436" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">UDP socket</text>
+  <text x="860.0" y="454" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#374151">datagrams only</text>
+  <rect x="660" y="472" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="860.0" y="501.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">IP · NIC</text>
+  <line x1="10" y1="399.0" x2="1090" y2="399.0" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="550.0" y="389.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" font-weight="bold" fill="#dc2626">user space</text>
+  <text x="550.0" y="421.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" font-weight="bold" fill="#dc2626">kernel</text>
+  <line x1="446" y1="486.0" x2="644" y2="486.0" stroke="#6366f1" stroke-width="2.5"/>
+  <path d="M654,486.0 l-12,-7 v14 z" fill="#6366f1"/>
+  <line x1="654" y1="504.0" x2="456" y2="504.0" stroke="#9ca3af" stroke-width="2.5"/>
+  <path d="M446,504.0 l12,-7 v14 z" fill="#9ca3af"/>
+  <text x="550.0" y="477.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#6366f1">data</text>
+  <text x="550.0" y="526.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">ACKs</text>
+  <text x="550.0" y="548" text-anchor="middle" font-family="'Space Mono', monospace" font-size="14" fill="#444">UDP datagrams · almost all encrypted</text>
+</svg>

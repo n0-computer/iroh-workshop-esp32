@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560">
+  <text x="240.0" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">sender</text>
+  <rect x="40" y="56" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="240.0" y="76" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">application</text>
+  <text x="240.0" y="94" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#374151">write(fd, bytes)</text>
+  <rect x="40" y="112" width="400" height="46" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="240.0" y="132" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#92400e">TLS library</text>
+  <text x="240.0" y="150" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#92400e">encrypt · optional</text>
+  <rect x="40" y="192" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="212" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">send buffer</text>
+  <text x="240.0" y="230" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">bytes not yet acked</text>
+  <rect x="40" y="248" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="268" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">segmentation</text>
+  <text x="240.0" y="286" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">bytes → packets</text>
+  <rect x="40" y="304" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="324" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">loss recovery</text>
+  <text x="240.0" y="342" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">ACKs · retransmit timers</text>
+  <rect x="40" y="360" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="240.0" y="380" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">congestion control</text>
+  <text x="240.0" y="398" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">how fast to send</text>
+  <rect x="40" y="416" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="240.0" y="445.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">IP · NIC</text>
+  <text x="860.0" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">receiver</text>
+  <rect x="660" y="56" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="860.0" y="76" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">application</text>
+  <text x="860.0" y="94" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#374151">read(fd) → bytes</text>
+  <rect x="660" y="112" width="400" height="46" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="860.0" y="132" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#92400e">TLS library</text>
+  <text x="860.0" y="150" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#92400e">decrypt · optional</text>
+  <rect x="660" y="192" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="212" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">receive buffer</text>
+  <text x="860.0" y="230" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">in-order bytes for read()</text>
+  <rect x="660" y="248" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="268" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">reassembly</text>
+  <text x="860.0" y="286" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">reorder · loss stalls all</text>
+  <rect x="660" y="304" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="324" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">ACK generation</text>
+  <text x="860.0" y="342" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">what arrived</text>
+  <rect x="660" y="360" width="400" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="860.0" y="380" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#3730a3">flow control</text>
+  <text x="860.0" y="398" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#3730a3">receive window</text>
+  <rect x="660" y="416" width="400" height="46" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="860.0" y="445.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#374151">IP · NIC</text>
+  <line x1="10" y1="175.0" x2="1090" y2="175.0" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="550.0" y="165.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" font-weight="bold" fill="#dc2626">user space</text>
+  <text x="550.0" y="197.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" font-weight="bold" fill="#dc2626">kernel</text>
+  <line x1="446" y1="430.0" x2="644" y2="430.0" stroke="#6366f1" stroke-width="2.5"/>
+  <path d="M654,430.0 l-12,-7 v14 z" fill="#6366f1"/>
+  <line x1="654" y1="448.0" x2="456" y2="448.0" stroke="#9ca3af" stroke-width="2.5"/>
+  <path d="M446,448.0 l12,-7 v14 z" fill="#9ca3af"/>
+  <text x="550.0" y="421.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#6366f1">data</text>
+  <text x="550.0" y="470.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" fill="#888">ACKs</text>
+  <text x="550.0" y="492" text-anchor="middle" font-family="'Space Mono', monospace" font-size="14" fill="#444">TCP segments · headers in plaintext</text>
+</svg>

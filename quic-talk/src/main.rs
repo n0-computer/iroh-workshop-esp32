@@ -195,6 +195,7 @@ pre code, pre { background: none; }
 pre { font-size: 20px; line-height: 1.4; margin: 12px 0; }
 svg.anim { display: block; width: 100%; max-height: 530px; margin: 8px auto 0; }
 img { max-width: 100%; max-height: 530px; display: block; margin: 8px auto 0; }
+.bg { color: #6366f1; font-size: 0.8em; margin-left: 12px; white-space: nowrap; }
 table { border-collapse: collapse; margin: 8px 0 16px; }
 th, td { padding: 8px 28px 8px 0; text-align: left; vertical-align: top; }
 thead th { border-bottom: 2px solid #ddd; }

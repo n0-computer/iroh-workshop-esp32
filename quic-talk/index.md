@@ -8,6 +8,32 @@ n0.computer
 
 ---
 
+# Why QUIC matters
+
+- **~21%** of web requests use HTTP/3 over QUIC ([Cloudflare Radar 2025])
+- **40–58%** of traffic volume on mobile carriers ([Cisco Live 2025])
+- IETF standard since 2021 ([RFC 9000]), in every major browser
+
+---
+
+<!-- center -->
+
+# QUIC is TCP over UDP
+
+---
+
+# How TCP works
+
+![](public/animations/tcp-works.svg)
+
+---
+
+# How QUIC works
+
+![](public/animations/quic-works.svg)
+
+---
+
 <!-- center -->
 
 iroh is a library for **direct** **QUIC** connections between endpoints identified and encrypted using ed25519 **keypairs**
@@ -39,6 +65,21 @@ iroh is **QUIC**, but **p2p**
 ---
 
 ![](public/animations/routing-moves.svg)
+
+---
+
+# How does it work
+
+Startup
+
+1. Pick a home relay <span class="bg">↻ in the background</span>
+2. Advertise your home relay <span class="bg">↻ when it changes</span>
+
+Connect
+
+1. Determine home relay of remote
+2. Connect via the remote's home relay
+3. Hole punch for a direct connection <span class="bg">↻ in the background</span>
 
 ---
 
@@ -174,3 +215,6 @@ iroh is **QUIC**, but **p2p**
 [irpc]: https://docs.rs/irpc
 [HTTP/3]: https://www.rfc-editor.org/rfc/rfc9114
 [MASQUE]: https://datatracker.ietf.org/wg/masque/about/
+[RFC 9000]: https://www.rfc-editor.org/rfc/rfc9000
+[Cloudflare Radar 2025]: https://blog.cloudflare.com/radar-2025-year-in-review/
+[Cisco Live 2025]: https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKSPM-2024.pdf
