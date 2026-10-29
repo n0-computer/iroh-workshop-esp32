@@ -8,7 +8,13 @@ n0.computer
 
 ---
 
-# Why QUIC matters
+# Does low-level networking still matter in 2026?
+
+![](public/images/meijer-comic.png)
+
+---
+
+# QUIC by the numbers
 
 - **~21%** of web requests use HTTP/3 over QUIC ([Cloudflare Radar 2025])
 - **40–58%** of traffic volume on mobile carriers ([Cisco Live 2025])
@@ -22,27 +28,58 @@ n0.computer
 
 ---
 
-# How TCP works
+# TCP components
 
 ![](public/animations/tcp-works.svg)
 
 ---
 
-# How QUIC works
+# QUIC components
 
 ![](public/animations/quic-works.svg)
 
 ---
 
-<!-- center -->
+# Middleboxes
 
-iroh is a library for **direct** **QUIC** connections between endpoints identified and encrypted using ed25519 **keypairs**
+Anything on the path that looks at your packets
+
+![](public/animations/middleboxes.svg)
+
+---
+
+# Ossification
+
+- Middleboxes read whatever they can read, and start to rely on it
+- What they rely on can no longer change
+
+> With a sufficient number of users of an API, it does not matter what you promise in the contract: **all observable behaviors of your system will be depended on by somebody.**
+
+<p class="cite"><a href="https://www.hyrumslaw.com/">Hyrum's Law</a></p>
 
 ---
 
 <!-- center -->
 
-iroh is **QUIC**, but **p2p**
+> QUIC is, in effect, the first IETF-defined transport protocol to take care of the minimization of its own wire image to prevent ossification and improve end-to-end privacy by reducing information radiation.
+
+<p class="cite"><a href="https://www.rfc-editor.org/rfc/rfc8546">RFC 8546</a>: The Wire Image of a Network Protocol (IAB, 2019)</p>
+
+---
+
+# On the wire
+
+![](public/animations/wire-headers.svg)
+
+---
+
+<!-- center -->
+
+# iroh is QUIC, but p2p
+
+---
+
+![](public/animations/routing-moves.svg)
 
 ---
 
@@ -64,7 +101,15 @@ iroh is **QUIC**, but **p2p**
 
 ---
 
-![](public/animations/routing-moves.svg)
+# Handshake: HTTPS
+
+![](public/animations/handshake-https.svg)
+
+---
+
+# Handshake: iroh (mutual TLS)
+
+![](public/animations/handshake-iroh.svg)
 
 ---
 
@@ -121,14 +166,14 @@ Connect
 
 # Why iroh uses QUIC
 
-- Why QUIC on the wire?
+- Why QUIC *on the wire*?
   - Tailscale, Headscale (WG + disco)
   - NetBird, Firezone (WG + ICE)
   - Netmaker, innernet, Talos KubeSpan (WG)
   - ZeroTier (own protocol), Nebula (Noise)
-- Why QUIC as the iroh API?
-  - [HTTP/3]: QUIC on the wire, HTTP API
-  - [MASQUE]: QUIC on the wire, VPN/proxy API
+- Why QUIC as the iroh *API*?
+  - [HTTP/3]: QUIC *on the wire*, HTTP *API*
+  - [MASQUE]: QUIC *on the wire*, VPN/proxy *API*
 
 ---
 
@@ -166,12 +211,13 @@ Connect
 # Hole punching
 
 - QUIC extension `N0NatTraversal`
-- Inspired by [Using QUIC to traverse NATs] draft RFC
+- Inspired by [Using QUIC to traverse NATs] draft RFC (M. Seemann, E. Kinnear)
 - `N0NatTraversal` coordination frame types
   - `AddAddress` — advertise a candidate address
   - ~~`PunchMeNow`~~ `ReachOut` — punch towards this address now
   - `RemoveAddress` — retract a candidate address
 - The punching itself is standard QUIC path validation: `PathChallenge` / `PathResponse`
+- **QUIC protocol evolution in action**: new frames inside the encrypted payload, nothing new for middleboxes to see
 
 ---
 
@@ -189,6 +235,8 @@ Connect
 - Responses encrypted - untouchable by middleboxes
 - Responses authenticated - not spoofable
 
+![](public/animations/stun-packets.svg)
+
 ---
 
 # What a middlebox sees
@@ -204,6 +252,15 @@ Connect
 - QUIC wire: multipath, hole punching and address discovery inside the connection
 - To a middlebox, it's just QUIC
 - Higher level protocols on top: [iroh-blobs], [iroh-gossip]; build your own with [irpc]
+
+---
+
+# Conclusion
+
+- QUIC lives in your app, and is encrypted on the wire
+- So unlike TCP, it can still evolve
+- iroh shows how far: dial a key, get a direct connection, anywhere
+- Build on QUIC, and on iroh if you want p2p
 
 [iroh.computer](https://iroh.computer) · [docs.iroh.computer](https://docs.iroh.computer) · [github.com/n0-computer/iroh](https://github.com/n0-computer/iroh)
 

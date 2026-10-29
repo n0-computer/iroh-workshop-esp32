@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540">
+  <text x="200" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">client</text>
+  <text x="200" y="54" text-anchor="middle" font-family="'Space Mono', monospace" font-size="14" fill="#6366f1">dials 8e2b…</text>
+  <line x1="200" y1="70" x2="200" y2="440" stroke="#cbd0d8" stroke-width="2"/>
+  <text x="900" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">server</text>
+  <text x="900" y="54" text-anchor="middle" font-family="'Space Mono', monospace" font-size="14" fill="#6366f1">holds 8e2b…</text>
+  <line x1="900" y1="70" x2="900" y2="440" stroke="#cbd0d8" stroke-width="2"/>
+  <line x1="208" y1="118" x2="882" y2="118" stroke="#222" stroke-width="2"/>
+  <path d="M892,118 l-12,-7 v14 z" fill="#222"/>
+  <text x="550.0" y="106" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">ClientHello</text>
+  <text x="550.0" y="142" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#888">no SNI · raw public keys only</text>
+  <line x1="892" y1="196" x2="218" y2="196" stroke="#222" stroke-width="2"/>
+  <path d="M208,196 l12,-7 v14 z" fill="#222"/>
+  <text x="550.0" y="184" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">public key 8e2b… + signature</text>
+  <text x="550.0" y="220" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#888">and: show me your key</text>
+  <rect x="35.0" y="232" width="330" height="82" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="200" y="260" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">is this the key</text>
+  <text x="200" y="282" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">I dialed?</text>
+  <text x="200" y="304" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">8e2b… = 8e2b… ✓</text>
+  <line x1="208" y1="350" x2="882" y2="350" stroke="#222" stroke-width="2"/>
+  <path d="M892,350 l-12,-7 v14 z" fill="#222"/>
+  <text x="550.0" y="338" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">public key a41f… + signature</text>
+  <text x="550.0" y="374" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#888">Finished</text>
+  <rect x="735.0" y="382" width="330" height="60" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="900" y="410" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">client is a41f… ✓</text>
+  <text x="900" y="432" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">welcome? the app decides</text>
+  <text x="300.0" y="482" text-anchor="end" font-family="'Space Mono', monospace" font-size="16" font-weight="bold" fill="#222">client knows:</text>
+  <text x="314.0" y="482" text-anchor="start" font-family="'Space Mono', monospace" font-size="16" fill="#444">this is 8e2b…, no third party involved</text>
+  <text x="300.0" y="512" text-anchor="end" font-family="'Space Mono', monospace" font-size="16" font-weight="bold" fill="#222">server knows:</text>
+  <text x="314.0" y="512" text-anchor="start" font-family="'Space Mono', monospace" font-size="16" fill="#444">this is a41f…; trust is up to the app</text>
+</svg>

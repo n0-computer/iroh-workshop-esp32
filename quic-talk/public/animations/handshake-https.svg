@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540">
+  <text x="200" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">client</text>
+  <text x="200" y="54" text-anchor="middle" font-family="'Space Mono', monospace" font-size="14" fill="#6366f1">browser</text>
+  <line x1="200" y1="70" x2="200" y2="440" stroke="#cbd0d8" stroke-width="2"/>
+  <text x="900" y="32" text-anchor="middle" font-family="'Space Mono', monospace" font-size="20" font-weight="bold" fill="#222">server</text>
+  <text x="900" y="54" text-anchor="middle" font-family="'Space Mono', monospace" font-size="14" fill="#6366f1">example.com</text>
+  <line x1="900" y1="70" x2="900" y2="440" stroke="#cbd0d8" stroke-width="2"/>
+  <line x1="208" y1="118" x2="882" y2="118" stroke="#222" stroke-width="2"/>
+  <path d="M892,118 l-12,-7 v14 z" fill="#222"/>
+  <text x="550.0" y="106" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">ClientHello</text>
+  <text x="550.0" y="142" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#dc2626">SNI: example.com · readable on the wire</text>
+  <line x1="892" y1="196" x2="218" y2="196" stroke="#222" stroke-width="2"/>
+  <path d="M208,196 l12,-7 v14 z" fill="#222"/>
+  <text x="550.0" y="184" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">certificate chain + signature</text>
+  <text x="550.0" y="220" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#888">example.com ← intermediate CA ← root CA</text>
+  <rect x="35.0" y="232" width="330" height="82" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="200" y="260" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">chain ends in a root CA</text>
+  <text x="200" y="282" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">from my trust store?</text>
+  <text x="200" y="304" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#3730a3">name is example.com?</text>
+  <line x1="208" y1="350" x2="882" y2="350" stroke="#222" stroke-width="2"/>
+  <path d="M892,350 l-12,-7 v14 z" fill="#222"/>
+  <text x="550.0" y="338" text-anchor="middle" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">Finished</text>
+  <text x="550.0" y="374" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#888">no client certificate</text>
+  <rect x="735.0" y="382" width="330" height="38" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="900" y="410" text-anchor="middle" font-family="'Space Mono', monospace" font-size="15" fill="#374151">client: anonymous</text>
+  <text x="300.0" y="482" text-anchor="end" font-family="'Space Mono', monospace" font-size="16" font-weight="bold" fill="#222">client knows:</text>
+  <text x="314.0" y="482" text-anchor="start" font-family="'Space Mono', monospace" font-size="16" fill="#444">a CA vouches that this is example.com</text>
+  <text x="300.0" y="512" text-anchor="end" font-family="'Space Mono', monospace" font-size="16" font-weight="bold" fill="#222">server knows:</text>
+  <text x="314.0" y="512" text-anchor="start" font-family="'Space Mono', monospace" font-size="16" fill="#444">nothing; the app asks for a password later</text>
+</svg>
