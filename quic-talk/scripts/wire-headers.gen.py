@@ -15,7 +15,7 @@ What an on-path observer can read, field by field, for three packets:
 
 Readable fields are amber, encrypted or header-protected ones gray. Field
 widths are not to scale; byte counts are under each field. The IP header
-(and UDP header for QUIC) in front is left out.
+(and UDP header for QUIC) in front is left out, ports included.
 
 Static, no animation. To change it, edit this script and run:
 python3 wire-headers.gen.py
@@ -28,7 +28,7 @@ OUT_PATH = os.path.normpath(os.path.join(
     HERE, "..", "public", "animations", "wire-headers.svg"))
 
 MONO = "'Space Mono', monospace"
-VB_W, VB_H = 1100, 445
+VB_W, VB_H = 1100, 390
 X0 = 150          # left edge of the packets; row labels sit left of it
 BOX_H = 46
 FORM_W = 14       # the header form bit, drawn as its own box
@@ -41,8 +41,6 @@ STYLE = {
 # (label, subtitle, form bit or None, [(width, category, text, bytes)])
 ROWS = [
     ("TCP + TLS", "every packet", None, [
-        (80, "visible", "src port", "2"),
-        (80, "visible", "dst port", "2"),
         (96, "visible", "seq nr", "4"),
         (96, "visible", "ACK nr", "4"),
         (74, "visible", "flags", "2"),
@@ -51,7 +49,7 @@ ROWS = [
         (70, "visible", "urgent", "2"),
         (80, "visible", "options", "0-40"),
         (90, "visible", "TLS hdr", "5"),
-        (110, "hidden", "encrypted", "n"),
+        (270, "hidden", "encrypted", "n"),
     ]),
     ("QUIC long", "handshake", "1", [
         (56, "hidden", "flags", "1"),
@@ -121,13 +119,6 @@ for cat, text in LEGEND:
         f'  <text x="{lx + 32}" y="{ly + 16}" font-family="{MONO}" '
         f'font-size="14" fill="#444">{text}</text>\n')
     lx += 32 + len(text) * 8.6 + 36
-parts.append(
-    f'  <text x="{X0}" y="{ly + 52}" font-family="{MONO}" font-size="12" '
-    f'fill="#888">IP and UDP headers not shown · QUIC flags: a few bits '
-    f'readable, the rest protected</text>\n'
-    f'  <text x="{X0}" y="{ly + 72}" font-family="{MONO}" font-size="12" '
-    f'fill="#888">Initial packets are encrypted with keys anyone can derive '
-    f'from the dest conn id</text>\n')
 
 svg = (
     f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {VB_W} {VB_H}">\n'

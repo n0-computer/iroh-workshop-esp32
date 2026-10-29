@@ -26,5 +26,5 @@
   <text x="300.0" y="482" text-anchor="end" font-family="'Space Mono', monospace" font-size="16" font-weight="bold" fill="#222">client knows:</text>
   <text x="314.0" y="482" text-anchor="start" font-family="'Space Mono', monospace" font-size="16" fill="#444">a CA vouches that this is example.com</text>
   <text x="300.0" y="512" text-anchor="end" font-family="'Space Mono', monospace" font-size="16" font-weight="bold" fill="#222">server knows:</text>
-  <text x="314.0" y="512" text-anchor="start" font-family="'Space Mono', monospace" font-size="16" fill="#444">nothing; the app asks for a password later</text>
+  <text x="314.0" y="512" text-anchor="start" font-family="'Space Mono', monospace" font-size="16" fill="#444">nothing; the app might ask for a password later</text>
 </svg>

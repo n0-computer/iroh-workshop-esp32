@@ -250,7 +250,7 @@ Connect
 - Dial a **key**, not an address: address lookup finds the endpoint
 - QUIC API: cheap streams, no head-of-line blocking, priorities
 - QUIC wire: multipath, hole punching and address discovery inside the connection
-- To a middlebox, it's just QUIC
+- To a middlebox, all of this is invisible
 - Higher level protocols on top: [iroh-blobs], [iroh-gossip]; build your own with [irpc]
 
 ---
@@ -259,7 +259,7 @@ Connect
 
 - QUIC lives in your app, and is encrypted on the wire
 - So unlike TCP, it can still evolve
-- iroh shows how far: dial a key, get a direct connection, anywhere
+- iroh shows an example: dial a key, get a direct connection, anywhere
 - Build on QUIC, and on iroh if you want p2p
 
 [iroh.computer](https://iroh.computer) · [docs.iroh.computer](https://docs.iroh.computer) · [github.com/n0-computer/iroh](https://github.com/n0-computer/iroh)

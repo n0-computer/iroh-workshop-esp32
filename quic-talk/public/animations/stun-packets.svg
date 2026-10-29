@@ -1,28 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 330">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 242">
   <text x="136" y="34" text-anchor="end" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">STUN</text>
   <text x="136" y="52" text-anchor="end" font-family="'Space Mono', monospace" font-size="11" fill="#888">request</text>
-  <rect x="150" y="12" width="90" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text x="195.0" y="40.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">type</text>
+  <rect x="150" y="12" width="90" height="46" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="195.0" y="40.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#991b1b">type</text>
   <text x="195.0" y="75" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">2</text>
   <rect x="240" y="12" width="70" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
   <text x="275.0" y="40.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">length</text>
   <text x="275.0" y="75" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">2</text>
-  <rect x="310" y="12" width="130" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text x="375.0" y="40.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">2112A442</text>
+  <rect x="310" y="12" width="130" height="46" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="375.0" y="40.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#991b1b">2112A442</text>
   <text x="375.0" y="75" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">4</text>
   <rect x="440" y="12" width="200" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
   <text x="540.0" y="40.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">transaction id</text>
   <text x="540.0" y="75" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">12</text>
   <text x="136" y="122" text-anchor="end" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">STUN</text>
   <text x="136" y="140" text-anchor="end" font-family="'Space Mono', monospace" font-size="11" fill="#888">response</text>
-  <rect x="150" y="100" width="90" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text x="195.0" y="128.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">type</text>
+  <rect x="150" y="100" width="90" height="46" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="195.0" y="128.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#991b1b">type</text>
   <text x="195.0" y="163" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">2</text>
   <rect x="240" y="100" width="70" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
   <text x="275.0" y="128.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">length</text>
   <text x="275.0" y="163" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">2</text>
-  <rect x="310" y="100" width="130" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text x="375.0" y="128.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">2112A442</text>
+  <rect x="310" y="100" width="130" height="46" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="375.0" y="128.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#991b1b">2112A442</text>
   <text x="375.0" y="163" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">4</text>
   <rect x="440" y="100" width="200" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
   <text x="540.0" y="128.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">transaction id</text>
@@ -39,25 +39,9 @@
   <rect x="920" y="100" width="160" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
   <text x="1000.0" y="128.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">IP ⊕ cookie</text>
   <text x="1000.0" y="163" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">4</text>
-  <text x="136" y="210" text-anchor="end" font-family="'Space Mono', monospace" font-size="17" font-weight="bold" fill="#222">QAD</text>
-  <text x="136" y="228" text-anchor="end" font-family="'Space Mono', monospace" font-size="11" fill="#888">inside QUIC</text>
-  <rect x="150" y="188" width="14" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text x="157.0" y="216.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">0</text>
-  <rect x="164" y="188" width="56" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="192.0" y="216.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#6b7280">flags</text>
-  <text x="192.0" y="251" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">1</text>
-  <rect x="220" y="188" width="150" height="46" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text x="295.0" y="216.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#92400e">dest conn id</text>
-  <text x="295.0" y="251" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">0-20</text>
-  <rect x="370" y="188" width="100" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="420.0" y="216.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#6b7280">pkt nr</text>
-  <text x="420.0" y="251" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">1-4</text>
-  <rect x="470" y="188" width="620" height="46" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="780.0" y="216.0" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#6b7280">encrypted frames: OBSERVED_ADDRESS, …</text>
-  <text x="780.0" y="251" text-anchor="middle" font-family="'Space Mono', monospace" font-size="11" fill="#888">n</text>
-  <rect x="150" y="272" width="22" height="22" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-  <text x="182" y="288" font-family="'Space Mono', monospace" font-size="14" fill="#444">readable on the wire</text>
-  <rect x="390.0" y="272" width="22" height="22" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="422.0" y="288" font-family="'Space Mono', monospace" font-size="14" fill="#444">encrypted or header-protected</text>
-  <text x="150" y="322" font-family="'Space Mono', monospace" font-size="12" fill="#888">2112A442: the STUN magic cookie, same in every packet · ⊕ cookie: so NATs don't rewrite it, not encryption</text>
+  <rect x="150" y="184" width="22" height="22" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="182" y="200" font-family="'Space Mono', monospace" font-size="14" fill="#444">same in every packet</text>
+  <rect x="390.0" y="184" width="22" height="22" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="422.0" y="200" font-family="'Space Mono', monospace" font-size="14" fill="#444">readable on the wire</text>
+  <text x="150" y="234" font-family="'Space Mono', monospace" font-size="12" fill="#888">2112A442: the STUN magic cookie · ⊕ cookie: so NATs don't rewrite it, not encryption</text>
 </svg>

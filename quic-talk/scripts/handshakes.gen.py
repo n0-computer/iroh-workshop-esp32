@@ -61,7 +61,7 @@ DIAGRAMS = {
         ],
         "summary": [
             ("client knows:", "a CA vouches that this is example.com"),
-            ("server knows:", "nothing; the app asks for a password later"),
+            ("server knows:", "nothing; the app might ask for a password later"),
         ],
     },
     "handshake-iroh": {

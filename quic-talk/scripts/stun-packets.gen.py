@@ -2,7 +2,7 @@
 """Generator for stun-packets.svg.
 
 What an on-path observer can read when an endpoint asks "what is my public
-address?", once with STUN and once with QUIC address discovery (QAD):
+address?" with STUN:
 
   STUN request:  a Binding request (RFC 8489): message type, length, the
                  fixed magic cookie 0x2112A442 and a transaction ID. One UDP
@@ -10,11 +10,9 @@ address?", once with STUN and once with QUIC address discovery (QAD):
   STUN response: the same header plus an XOR-MAPPED-ADDRESS attribute. The
                  address is XORed with the magic cookie so that NATs don't
                  rewrite it; anyone can undo that.
-  QAD:           an OBSERVED_ADDRESS frame inside an ordinary QUIC short
-                 header packet, encrypted like every other frame.
 
-Same look as wire-headers.svg: readable fields amber, encrypted or
-header-protected ones gray. Field widths are not to scale; byte counts are
+Same colors as packet-headers.svg: fields that are the same in every packet
+red, other readable fields amber. Field widths are not to scale; byte counts are
 under each field. IP and UDP headers are left out.
 
 Static, no animation. To change it, edit this script and run:
@@ -28,7 +26,7 @@ OUT_PATH = os.path.normpath(os.path.join(
     HERE, "..", "public", "animations", "stun-packets.svg"))
 
 MONO = "'Space Mono', monospace"
-VB_W, VB_H = 1100, 330
+VB_W, VB_H = 1100, 242
 X0 = 150          # left edge of the packets; row labels sit left of it
 BOX_H = 46
 ROW_STEP = 88
@@ -36,14 +34,15 @@ FORM_W = 14       # the QUIC header form bit, drawn as its own box
 
 # fill, stroke, text color per category
 STYLE = {
+    "fixed": ("#fee2e2", "#dc2626", "#991b1b"),
     "visible": ("#fef3c7", "#d97706", "#92400e"),
     "hidden": ("#f3f4f6", "#9ca3af", "#6b7280"),
 }
 
 STUN_HEADER = [
-    (90, "visible", "type", "2"),
+    (90, "fixed", "type", "2"),
     (70, "visible", "length", "2"),
-    (130, "visible", "2112A442", "4"),
+    (130, "fixed", "2112A442", "4"),
     (200, "visible", "transaction id", "12"),
 ]
 
@@ -55,12 +54,6 @@ ROWS = [
         (70, "visible", "family", "2"),
         (130, "visible", "port ⊕ cookie", "2"),
         (160, "visible", "IP ⊕ cookie", "4"),
-    ]),
-    ("QAD", "inside QUIC", "0", [
-        (56, "hidden", "flags", "1"),
-        (150, "visible", "dest conn id", "0-20"),
-        (100, "hidden", "pkt nr", "1-4"),
-        (620, "hidden", "encrypted frames: OBSERVED_ADDRESS, …", "n"),
     ]),
 ]
 
@@ -88,7 +81,7 @@ for i, (label, subtitle, form_bit, fields) in enumerate(ROWS):
         f'font-family="{MONO}" font-size="11" fill="#888">{subtitle}</text>\n')
     x = X0
     if form_bit is not None:
-        fill, stroke, ink = STYLE["visible"]
+        fill, stroke, ink = STYLE["fixed"]
         parts.append(
             f'  <rect x="{x}" y="{y}" width="{FORM_W}" height="{BOX_H}" '
             f'fill="{fill}" stroke="{stroke}" stroke-width="1.5"/>\n'
@@ -102,10 +95,10 @@ for i, (label, subtitle, form_bit, fields) in enumerate(ROWS):
 
 # legend
 LEGEND = [
+    ("fixed", "same in every packet"),
     ("visible", "readable on the wire"),
-    ("hidden", "encrypted or header-protected"),
 ]
-lx, ly = X0, 272
+lx, ly = X0, 184
 for cat, text in LEGEND:
     fill, stroke, _ = STYLE[cat]
     parts.append(
@@ -116,7 +109,7 @@ for cat, text in LEGEND:
     lx += 32 + len(text) * 8.6 + 36
 parts.append(
     f'  <text x="{X0}" y="{ly + 50}" font-family="{MONO}" font-size="12" '
-    f'fill="#888">2112A442: the STUN magic cookie, same in every packet · '
+    f'fill="#888">2112A442: the STUN magic cookie · '
     f'⊕ cookie: so NATs don\'t rewrite it, not encryption</text>\n')
 
 svg = (
